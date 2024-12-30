@@ -81,7 +81,7 @@ try :
     if args :
         print(" ---- ** Total Test Case ** ---- ")
         TESTLINK_API_PYTHON_SERVER_URL=args.server_api
-        TESTLINK_API_PYTHON_DEVKEY= args.devk  ## admin 
+        TESTLINK_API_PYTHON_DEVKEY= args.devk   
         client = testlink.TestLinkHelper().connect(testlink.TestlinkAPIClient)
         total_test_case = Total_Test_Case( args.project , args.TestPlaName , args.TestSuiteName ) 
         
