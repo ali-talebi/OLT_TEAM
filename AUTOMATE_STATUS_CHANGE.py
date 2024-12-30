@@ -1,7 +1,7 @@
 """
     Author : Amin Amani -Ali Talebi 
     
-    Description : Connect to Test Link And Returned Total Test Case 
+    Description : CHANGE STATUS OF TEST CASE IN TEST LINK 
      
     Steps : 
     
