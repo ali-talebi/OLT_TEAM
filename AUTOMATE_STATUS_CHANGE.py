@@ -31,8 +31,8 @@
             options:
             -h, --help     show this help message and exit
         
-        3 - python Geter_TestCase.py http://195.201.231.223:8080/lib/api/xmlrpc/v1/xmlrpc.php 2a40335f269615f7ebcef5af20141167 OLT_SINA_Comp Sina_COM_TESTPLAN test_suite_1_olt_sin_com
-
+        3 - python AUTOMATE_STATUS_CHANGE.py http://195.201.231.223:8080/lib/api/xmlrpc/v1/xmlrpc.php 2a40335f269615f7ebcef5af20141167 OLT_SINA_Comp Sina_COM_TESTPLAN test_suite_1_olt_sin_com p 
+        
         4 - Return Data IS a List of Dictionary  : 
         
             [{'id': '110', 'parent_id': '109', 'node_type_id': '3', 'node_order': '1000', 'node_table': 'testcases', 'name': 'TEST_FUNCTION_hello', 'external_id': 'olt_sina-1'}, {'id': '112', 'parent_id': '109', 'node_type_id': '3', 'node_order': '1001', 'node_table': 'testcases', 'name': 'TEST_FUNCTION_Bridge', 'external_id': 'olt_sina-2'}]
@@ -71,7 +71,7 @@ def Total_Test_Case(project_name , test_plan_name , test_suite_name  , FLAG ) :
                                         # print("BUILD" , build)
                                         # print("PLATFORM" , platform)
                                         # print(type(platform))
-                                        total_test_case_found.append(a)
+                                        
                                         
                                         ere = client.reportTCResult(
                                         testcaseid=int(a['id']),
@@ -83,6 +83,8 @@ def Total_Test_Case(project_name , test_plan_name , test_suite_name  , FLAG ) :
                                         platformname= platform  ##'Ununtu linux' #platforms['key_plat']['name'] # key_plat 
                                         )
                                         print(ere)
+                                        
+                                        total_test_case_found.append(a)
                             
                             
     return total_test_case_found 
